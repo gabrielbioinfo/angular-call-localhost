@@ -18,6 +18,10 @@ export class AppComponent {
     fetch('http://localhost:3000/')
       .then((response) => response.text())
       .then((data) => this.response.set(data))
-      .catch((err) => this.response.set('Servidor offline!'));
+      .catch((err) =>
+        this.response.set(
+          'Servidor offline! Por favor ligue seu servidor em http://localhost:3000.'
+        )
+      );
   }
 }
