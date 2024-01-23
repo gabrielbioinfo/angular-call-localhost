@@ -82,13 +82,13 @@ export class AppComponent {
     //'http://localhost:3000/'
     this.socket = io(this.webSocketLocation);
     this.socket.on('connect', () => {
-      this.response.set('Conectado ao servidor!');
+      this.wsResponse.set('Conectado ao servidor!');
     });
     this.socket.on('message', (data) => {
-      this.response.set(data);
+      this.wsResponse.set(data);
     });
     this.socket.on('disconnect', () => {
-      this.response.set('Desconectado do servidor!');
+      this.wsResponse.set('Desconectado do servidor!');
     });
   }
 
