@@ -38,16 +38,12 @@ import { Socket, io } from 'socket.io-client';
     <hr />
     <h3>Web Socket Message:</h3>
     <input
-      type="url"
+      type="text"
       class="form-control"
       [(ngModel)]="wsMessage"
       placeholder="http://localhost:3000"
     />
-    <button (click)="sendMessage()">WebSocket: Enviar Mensagem</button>
-    <hr />
-    <div style="border: 1px solid;padding: 3px;width:100%;min-height: 30px">
-      {{ wsMessageResponse() }}
-    </div> `,
+    <button (click)="sendMessage()">WebSocket: Enviar Mensagem</button> `,
   styles: [],
 })
 export class AppComponent {
